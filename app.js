@@ -9,8 +9,13 @@ function calculate(){
     let totalMonthsOld = Math.floor(remainderOfYears / (1000*60*60*24*30.44))
     let remainderOfMonth = remainderOfYears % (1000*60*60*24*30.44)
     let totalDaysOld = Math.floor(remainderOfMonth / (1000*60*60*24));
+   let parent = document.getElementById("parent")
     let age = document.getElementById("result")
     let daysLeft = document.getElementById("daysLeft")
+   parent.classList = ["parent"]
+ 
+  
+ 
     age.innerHTML = `<h1>Age:</h1> You are ${totalYearsOld} years ${totalMonthsOld} months and ${totalDaysOld} days old`
     age.classList = ["para"];
     let birthdayDateThisYear = userDate;
@@ -24,5 +29,6 @@ function calculate(){
 
     daysLeft.innerHTML = `<h1>Days Left:</h1>There are ${daysLeftInNextBirthday} days left in your next birthday`
     daysLeft.classList = ["para1"];
+    
 }
 
